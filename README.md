@@ -21,7 +21,7 @@
 1. Установите бесплатное приложение **a-Shell mini** из App Store.
 2. Скопируйте команду ниже (выделите текст и нажмите «Скопировать»):
 ```bash
-curl -s [https://raw.githubusercontent.com/livkin-dev/mobile-probe/main/mobile_probe.sh](https://raw.githubusercontent.com/livkin-dev/mobile-probe/main/mobile_probe.sh) | bash
+curl -s https://raw.githubusercontent.com/livkin-dev/mobile-probe/main/mobile_probe.sh | bash
 ```
 3. Откройте приложение **a-Shell mini**. Удерживайте палец на черном экране и выберите **«Вставить» (Paste)**.
 4. Нажмите кнопку **return** (Ввод) на клавиатуре.
@@ -32,7 +32,7 @@ curl -s [https://raw.githubusercontent.com/livkin-dev/mobile-probe/main/mobile_p
 1. Установите бесплатное приложение **Termux** (рекомендуем через F-Droid).
 2. Скопируйте команду:
 ```bash
-curl -s [https://raw.githubusercontent.com/livkin-dev/mobile-probe/main/mobile_probe.sh](https://raw.githubusercontent.com/livkin-dev/mobile-probe/main/mobile_probe.sh) | bash
+curl -s https://raw.githubusercontent.com/livkin-dev/mobile-probe/main/mobile_probe.sh | bash
 ```
 3. Откройте **Termux**. Зажмите палец на экране, выберите **«Paste» (Вставить)**.
 4. Нажмите **Enter** (Ввод).
@@ -43,7 +43,7 @@ curl -s [https://raw.githubusercontent.com/livkin-dev/mobile-probe/main/mobile_p
 1. Откройте стандартное приложение **Терминал (Terminal)**.
 2. Вставьте команду и нажмите **Enter**:
 ```bash
-curl -s [https://raw.githubusercontent.com/livkin-dev/mobile-probe/main/mobile_probe.sh](https://raw.githubusercontent.com/livkin-dev/mobile-probe/main/mobile_probe.sh) | bash
+curl -s https://raw.githubusercontent.com/livkin-dev/mobile-probe/main/mobile_probe.sh | bash
 ```
 3. Сделайте скриншот результата и отправьте нам.
 
@@ -52,7 +52,7 @@ curl -s [https://raw.githubusercontent.com/livkin-dev/mobile-probe/main/mobile_p
 1. Нажмите меню **«Пуск»**, введите слово **PowerShell** и откройте программу.
 2. Скопируйте эту команду:
 ```powershell
-$urls="[https://ios.chat.openai.com](https://ios.chat.openai.com)","[https://api.anthropic.com](https://api.anthropic.com)","[https://generativelanguage.googleapis.com](https://generativelanguage.googleapis.com)","[https://alkali.googleapis.com](https://alkali.googleapis.com)","[https://api.x.ai](https://api.x.ai)","[https://api.perplexity.ai](https://api.perplexity.ai)","[https://api.deepseek.com](https://api.deepseek.com)"; Write-Host "=========================================================================================="; Write-Host " 📡 EL VIGÍA PROBE: LLM API CENSORSHIP TEST"; Write-Host "=========================================================================================="; "{0,-35} | {1,-15} | {2,-6} | {3,-9} | {4}" -f "API ENDPOINT", "IP", "STATUS", "TIME(ms)", "TSPU BLOCKED?"; foreach($u in $urls){ $hostName = ([uri]$u).Host; try { $ip = [System.Net.Dns]::GetHostAddresses($hostName)[0].IPAddressToString } catch { $ip = "N/A" }; $sw = [System.Diagnostics.Stopwatch]::StartNew(); try { $r = Invoke-WebRequest -Uri $u -TimeoutSec 10 -UseBasicParsing -ErrorAction Stop; $sw.Stop(); "{0,-35} | {1,-15} | {2,-6} | {3,-9} | ✅ NO" -f $hostName, $ip, $r.StatusCode, $sw.ElapsedMilliseconds } catch { $sw.Stop(); "{0,-35} | {1,-15} | {2,-6} | {3,-9} | ⚠️ YES (BLOCKED)" -f $hostName, $ip, "ERR", $sw.ElapsedMilliseconds } }
+$urls="https://ios.chat.openai.com","https://api.anthropic.com","https://generativelanguage.googleapis.com","https://alkali.googleapis.com","https://api.x.ai","https://api.perplexity.ai","https://api.deepseek.com"; Write-Host "=========================================================================================="; Write-Host " 📡 EL VIGÍA PROBE: LLM API CENSORSHIP TEST"; Write-Host "=========================================================================================="; "{0,-35} | {1,-15} | {2,-6} | {3,-9} | {4}" -f "API ENDPOINT", "IP", "STATUS", "TIME(ms)", "TSPU BLOCKED?"; foreach($u in $urls){ $hostName = ([uri]$u).Host; try { $ip = [System.Net.Dns]::GetHostAddresses($hostName)[0].IPAddressToString } catch { $ip = "N/A" }; $sw = [System.Diagnostics.Stopwatch]::StartNew(); try { $r = Invoke-WebRequest -Uri $u -TimeoutSec 10 -UseBasicParsing -ErrorAction Stop; $sw.Stop(); "{0,-35} | {1,-15} | {2,-6} | {3,-9} | ✅ NO" -f $hostName, $ip, $r.StatusCode, $sw.ElapsedMilliseconds } catch { $sw.Stop(); "{0,-35} | {1,-15} | {2,-6} | {3,-9} | ⚠️ YES (BLOCKED)" -f $hostName, $ip, "ERR", $sw.ElapsedMilliseconds } }
 ```
 3. Кликните **правой кнопкой мыши** в синем окне PowerShell (текст вставится) и нажмите **Enter**.
 4. Сделайте скриншот и отправьте нам.
